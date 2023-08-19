@@ -7,27 +7,28 @@
  * @returns {string} Returns the capitalized string.
  * @example
  *
- * capitalize('fred')
- * // => 'FRED'
+ * capitalizeWords('do all the things')
+ * // => 'Do All The Things'
  */
 
- const capitalize = (string) => {
-    let capatilizedFirstLetter= string[0].toUpperCase()
-    const trailingLettersAndWords = string.slice(1)
-    const capitalizedWord = capatilizedFirstLetter + trailingLettersAndWords
-    return capitalizedWord
-}
+import { capitalize } from "./capitalize.js"
 
  const capitalizeWords = (string) => {
-    splitString= string.split(' ');
+    const splitString= string.split(' ');
     let capatilizedWordsArray = []
+    let word = 0
     for (word in splitString){
         capatilizedWordsArray.push(capitalize(splitString[word]))
     }
     const capatilizedWords = capatilizedWordsArray.join().replaceAll(',', ' ');
-
     return capatilizedWords
  }
 
- const str = 'the quick brown fox jumps over the lazy dog.';
- console.log(capitalizeWords(str))
+ const testCapatilizedWords = () => {
+     const str = 'the quick brown fox jumps over the lazy dog.';
+     console.log(capitalizeWords(str))
+ }
+//  testCapatilizedWords();
+
+
+ export {capitalizeWords}
