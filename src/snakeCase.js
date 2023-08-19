@@ -12,6 +12,18 @@
  * // => "what_the_heck"
  */
 
-const snakeCase = () => {
-    
+ import {removeExtraSpaces}  from "./removeExtraSpaces.js";
+
+const snakeCase = (string) => {
+    const lowerCaseStringWIthoutSpaces = removeExtraSpaces(string).toLowerCase();
+    const snakeCaseString = lowerCaseStringWIthoutSpaces.replaceAll(' ', '_')
+    return snakeCaseString
 }
+
+const testSnakeCase = () => {
+    const string = "  what the    heck   ";
+    console.log(snakeCase(string))
+}
+// testSnakeCase()
+
+export {snakeCase}

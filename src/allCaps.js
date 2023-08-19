@@ -7,7 +7,7 @@
  * @returns {string} Returns the capitalized string.
  * @example
  *
- * capitalize('fred')
+ * allCaps('fred')
  * // => 'FRED'
  */
 

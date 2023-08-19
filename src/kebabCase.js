@@ -17,7 +17,7 @@ import {removeExtraSpaces}  from "./removeExtraSpaces.js";
  const kebabCase = (string) => {
     const lowerCaseStringWIthoutSpaces = removeExtraSpaces(string).toLowerCase();
     const kebabString= lowerCaseStringWIthoutSpaces.replaceAll(' ', '-')
-    console.log(kebabString)
+    return kebabString
 }
 
 const testKebabCase = () => {
