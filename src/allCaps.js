@@ -15,13 +15,4 @@ const allCaps = (string) => {
     return string.toUpperCase()
 }
 
-const testAllCaps = () => {
-    const str = 'the quick brown fox jumps over the lazy dog.';
-    const phrase = 'hello world'
-    console.log(allCaps(phrase))
-    console.log(allCaps(str)) 
-}
-// testAllCaps()
-
-
-export {allCaps}
+module.exports.allCaps = allCaps

@@ -19,7 +19,7 @@ import {capitalizeWords} from './capitalizeWords.js';
     const lowercasedFirstletter = capitalizedString[0].toLowerCase()
     const restOfLetters = capitalizedString.slice(1)
     const camelCased = lowercasedFirstletter + restOfLetters.replaceAll(' ', '')
-    console.log(camelCased)
+    return camelCased;
 
 }
 
