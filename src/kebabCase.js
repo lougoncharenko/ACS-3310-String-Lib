@@ -12,7 +12,7 @@
  * // => ""hello-world""
  */
 
-import {removeExtraSpaces}  from "./removeExtraSpaces.js";
+ const { removeExtraSpaces } = require("./removeExtraSpaces.js");
 
  const kebabCase = (string) => {
     const lowerCaseStringWIthoutSpaces = removeExtraSpaces(string).toLowerCase();
@@ -20,10 +20,4 @@ import {removeExtraSpaces}  from "./removeExtraSpaces.js";
     return kebabString
 }
 
-const testKebabCase = () => {
-   const string = "   Hello    world   again";
-   kebabCase(string);
- 
-}
-
-export {kebabCase}
+module.exports.kebabCase = kebabCase

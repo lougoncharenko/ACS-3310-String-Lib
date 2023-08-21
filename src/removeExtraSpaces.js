@@ -18,7 +18,4 @@ const removeExtraSpaces = (string) => {
     return result.join(' ')
 }
 
-// const str = "   Hello    world!   "
-// console.log(removeExtraSpaces(str))
-
-export {removeExtraSpaces}
+module.exports.removeExtraSpaces = removeExtraSpaces

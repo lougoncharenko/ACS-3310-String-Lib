@@ -12,7 +12,7 @@
  * // => "what_the_heck"
  */
 
- import {removeExtraSpaces}  from "./removeExtraSpaces.js";
+ const { removeExtraSpaces } = require("./removeExtraSpaces.js");
 
 const snakeCase = (string) => {
     const lowerCaseStringWIthoutSpaces = removeExtraSpaces(string).toLowerCase();
@@ -20,10 +20,4 @@ const snakeCase = (string) => {
     return snakeCaseString
 }
 
-const testSnakeCase = () => {
-    const string = "  what the    heck   ";
-    console.log(snakeCase(string))
-}
-// testSnakeCase()
-
-export {snakeCase}
+module.exports.snakeCase = snakeCase
