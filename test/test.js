@@ -6,6 +6,7 @@ const {kebabCase} = require("../src/kebabCase.js");
 const { removeExtraSpaces } = require("../src/removeExtraSpaces.js");
 const {shift} = require("../src/shift.js");
 const { snakeCase } = require("../src/snakeCase.js");
+const { makeHashTag } = require("../src/makeHashTag.js");
 
 test('test allCaps', () => {
     expect(allCaps('fred')).toBe('FRED');
@@ -49,4 +50,8 @@ test('test shift', () => {
 test('test snakeCase', () => {
     expect(snakeCase('  what the    heck   ')).toBe('what_the_heck');
     expect(snakeCase('Hello world again')).toBe('hello_world_again');
+})
+
+test('test makeHashTag', () => {
+    expect(makeHashTag('Amazing bongo drums for sale')).toStrictEqual(['#Amazing', '#bongo', '#drums']);
 })
