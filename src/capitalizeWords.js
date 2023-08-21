@@ -11,7 +11,7 @@
  * // => 'Do All The Things'
  */
 
-import { capitalize } from "./capitalize.js"
+ const {capitalize} = require ("./capitalize.js");
 
  const capitalizeWords = (string) => {
     const splitString= string.split(' ');
@@ -24,11 +24,4 @@ import { capitalize } from "./capitalize.js"
     return capatilizedWords
  }
 
- const testCapatilizedWords = () => {
-     const str = 'the quick brown fox jumps over the lazy dog.';
-     console.log(capitalizeWords(str))
- }
-//  testCapatilizedWords();
-
-
- export {capitalizeWords}
+module.exports.capitalizeWords = capitalizeWords

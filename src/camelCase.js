@@ -12,7 +12,7 @@
  * // => "camelCase"
  */
 
-import {capitalizeWords} from './capitalizeWords.js';
+ const {capitalizeWords} = require ("./capitalizeWords.js");
 
  const camelCase = (string) => {
     const capitalizedString = capitalizeWords(string)
@@ -23,4 +23,4 @@ import {capitalizeWords} from './capitalizeWords.js';
 
 }
 
-camelCase('Camel Case Words')
+module.exports.camelCase = camelCase

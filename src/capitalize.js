@@ -18,12 +18,4 @@ const capitalize = (string) => {
     return capitalizedWord
 }
 
-const testCapitalize = () => {
-    const str = 'the quick brown fox jumps over the lazy dog.';
-    const phrase = 'hello word'
-    console.log(capitalize(phrase))
-    console.log(capitalize(str))
-}
-// testCapitalize()
-
-export {capitalize}
+module.exports.capitalize = capitalize
