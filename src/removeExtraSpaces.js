@@ -4,8 +4,8 @@
  *
  * @since 1.0.0
  * @category String
- * @param {string} [string=''] The string to all.
- * @returns {string} Returns the capitalized string.
+ * @param {string} [string=''] The string to modify.
+ * @returns {string} Returns a string with extra spaces removed.
  * @example
  *
  * removeExtraSpaces("   Hello    world!   ")

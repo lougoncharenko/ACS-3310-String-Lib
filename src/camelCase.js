@@ -4,7 +4,7 @@
  *
  * @since 1.0.0
  * @category String
- * @param {string} [string=''] The string to camelCase.
+ * @param {string} [string=''] The string to modify.
  * @returns {string} Returns the camelCased string.
  * @example
  *

@@ -4,7 +4,7 @@ const {capitalize} = require("../src/capitalize.js");
 const {capitalizeWords} = require ("../src/capitalizeWords.js");
 const {kebabCase} = require("../src/kebabCase.js");
 const { removeExtraSpaces } = require("../src/removeExtraSpaces.js");
-// const {shift} = require("../src/shift.js");
+const {shift} = require("../src/shift.js");
 const { snakeCase } = require("../src/snakeCase.js");
 
 test('test allCaps', () => {
@@ -39,6 +39,11 @@ test('test kebabCase', () => {
 test('test removeExtraSpaces', () => {
     expect(removeExtraSpaces('   Hello    world!   ')).toBe('Hello world!');
     expect(removeExtraSpaces('   Hello    world   again')).toBe('Hello world again');
+})
+
+test('test shift', () => {
+    expect(shift('Hello World')).toBe('ello WorldH');
+    expect(shift('What the heck')).toBe('hat the heckW');
 })
 
 test('test snakeCase', () => {
