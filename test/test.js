@@ -7,6 +7,7 @@ const { removeExtraSpaces } = require("../src/removeExtraSpaces.js");
 const {shift} = require("../src/shift.js");
 const { snakeCase } = require("../src/snakeCase.js");
 const { makeHashTag } = require("../src/makeHashTag.js");
+const {isEmpty} = require("../src/isEmpty.js");
 
 test('test allCaps', () => {
     expect(allCaps('fred')).toBe('FRED');
@@ -55,3 +56,11 @@ test('test snakeCase', () => {
 test('test makeHashTag', () => {
     expect(makeHashTag('Amazing bongo drums for sale')).toStrictEqual(['#Amazing', '#bongo', '#drums']);
 })
+
+test('tests isEmpty', () => {
+    expect(isEmpty('Hello World')).toBe(false);
+    expect(isEmpty('    hello world  ')).toBe(false);
+    expect(isEmpty('     ')).toBe(true);
+    expect(isEmpty('  \n   ')).toBe(true);
+    expect(isEmpty('\n\t\r')).toBe(true);
+});
