@@ -12,14 +12,15 @@
  * // => "camelCase"
  */
 
-const {capitalizeWords} = require('./capitalizeWords.js')
+import {capitalizeWords} from './capitalizeWords.js';
 
  const camelCase = (string) => {
     const capitalizedString = capitalizeWords(string)
     const lowercasedFirstletter = capitalizedString[0].toLowerCase()
     const restOfLetters = capitalizedString.slice(1)
     const camelCased = lowercasedFirstletter + restOfLetters.replaceAll(' ', '')
-    return camelCased;
+    console.log(camelCased)
+
 }
 
-module.exports.camelCase = camelCase
+camelCase('Camel Case Words')
